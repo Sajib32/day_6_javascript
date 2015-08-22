@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title></title>
+        <script>
+            function getFrequency() {
+                var freq = {};
+                var charac = document.getElementById("textValue").value;
+                for (var i=0; i<charac.length;i++) {
+                    var character = charac.charAt(i);
+                    if (freq[character]) {
+                       freq[character]++;
+                    } else {
+                       freq[character] = 1;
+                    }
+                }
+
+                console.log(freq);
+            }
+       
+        </script>   
+    </head>  
+<body>
+   <h2>Number display:</h2>
+    <input type="text" id="textValue" placeholder="Enter number"/>
+    <br>
+    <div id="result"></div>
+    <div id="warning"></div>
+    <div id="count"></div>
+    <br>
+    <button onClick="getFrequency()">Show Numbers</button>  
+</body>
+</html>
